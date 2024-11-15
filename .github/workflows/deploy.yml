@@ -20,22 +20,16 @@ jobs:
         with:
           channel: stable
           cache: true
-          flutter-version: 3.24.1
+          flutter-version: 3.24.5
 
       - run: flutter build web --wasm
-      - run: |
-          cat <<EOF > build/web/_headers
-          /*
-            Cross-Origin-Opener-Policy: same-origin
-            Cross-Origin-Embedder-Policy: require-corp
-          EOF
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.ACCOUNT_ID }}
-          projectName: tabela-periodica
+          projectName: testtabela
           directory: build/web
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
