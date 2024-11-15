@@ -1,0 +1,35 @@
+{
+    "name": "Tabela Periódica",
+    "short_name": "Tabela Periódica",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#e0e7ec",
+    "theme_color": "#e0e7ec",
+    "description": "Tabela Periódica Interativa",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
