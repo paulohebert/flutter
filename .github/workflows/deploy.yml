@@ -23,6 +23,13 @@ jobs:
           flutter-version: 3.24.5
 
       - run: flutter build web --wasm
+      
+      - run: |
+          cat <<EOF > build/web/_headers
+          /*
+            Cross-Origin-Opener-Policy: same-origin
+            Cross-Origin-Embedder-Policy: require-corp
+          EOF
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
